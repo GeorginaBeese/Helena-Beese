@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <title>Helena Beese Portfolio</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+       
+       <h1 class="text">Helena Beese Portfolio</h1>
+
+       <nav> 
+        <ul>
+          <a href="about.html" id="navigation" >About Me</a>
+          <a href="portfolio.html" id="navigation" >Portfolio</a>
+          <a href="comissions.html" id="navigation" >Comissions</a>
+          <a href="contact.html" id="navigation" >Contact</a>
+        </ul>
+      </nav>
+    
+      <p class="text"> <span title="Painting set does not come free :( ">Painting set free...</span> </p>
+   
+       <img id="uclshowcase" alt="uclshowcase" src="https://ual-media-res.cloudinary.com/image/fetch/c_fill,f_auto,g_auto,q_auto,w_800/https://portfolio-tools.s3.eu-west-2.amazonaws.com/wp-content/uploads/2023/06/18142301/Blue-Mag-2-1.jpg"><br><br>
+       
+       <a id="UAL_website" href="https://ualshowcase.arts.ac.uk/project/494015/cover" target="_blank">Link to UAL website</a> 
+  
+
+      <!-- Adding our JavaScript in the script tag -->
+      <script>
+        // Identifying our image
+        const uclshowcase = document.querySelector("#uclshowcase");
+
+        // Adding reaction when image is clicked
+        uclshowcase.addEventListener("click", () => {
+           alert(`"Hey Helena!"`);
+        });
+      </script>
+
+    </body>
+</html>

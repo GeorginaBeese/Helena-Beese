@@ -1,0 +1,80 @@
+body {
+    background-color: lightgoldenrodyellow;
+    font-family: Avenir;
+    text-align: center;
+}
+  
+  
+h1 {
+    font-size: 40px; 
+}
+  
+.text, #Contents {
+    color: green; 
+}
+  
+#uclshowcase {
+    width: 500px;
+    height: auto;
+}
+
+@media only screen and (max-width: 400px) {
+  #uclshowcase {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  #smiley {
+    max-width: 300px;
+    width: 100%;
+  }
+}
+
+#navigation {
+    
+  display: inline-block;        
+  width: 110px;              /* sets the width of the element */
+  height: 36px;              /* sets the height of the element */
+  margin-top: 30px;          /* sets the margin above the element */
+  background-color: #eddccb; /* sets the background color of the element */
+  border-radius: 6px;       /* rounds the corners of the element border */
+  
+  color: rgb(74, 74, 221);          /* sets the color of the text */
+  font-size: 14px;       /* sets the font size of the text */
+  text-align: center;    /* horizontally centers the text inside the element */
+  line-height: 36px;     /* vertically centers the text inside the element */
+  text-decoration: none; /* removes the underline from the link text */
+  transition: 0.5s;      /* creates a fade effect for the text on mouse hover */
+}
+
+  /* prevents the text color from changing after the link is clicked */
+  #navigation:visited { color: white; }
+  
+  /* changes the text color on mouse hover */
+  #navigation:hover { color: green;  }
+
+
+#UAL_website {
+    
+    display: inline-block;            /* makes the <a> element a block-level element */
+    width: 165px;              /* sets the width of the element */
+    height: 36px;              /* sets the height of the element */
+    margin-top: 30px;          /* sets the margin above the element */
+    background-color: #eddccb; /* sets the background color of the element */
+    border-radius: 6px;       /* rounds the corners of the element border */
+    
+    color: rgb(74, 74, 221);          /* sets the color of the text */
+    font-size: 14px;       /* sets the font size of the text */
+    text-align: center;    /* horizontally centers the text inside the element */
+    line-height: 36px;     /* vertically centers the text inside the element */
+    text-decoration: none; /* removes the underline from the link text */
+    transition: 0.5s;      /* creates a fade effect for the text on mouse hover */
+  }
+
+  
+  /* prevents the text color from changing after the link is clicked */
+  #UAL_website:visited { color: white; }
+  
+  /* changes the text color on mouse hover */
+  #UAL_website:hover { color: green;  }

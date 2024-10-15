@@ -1,6 +1,14 @@
-
-html.nontouch nav a:hover{ /* hover effect only visible to devices that report back as not supporting touch */
-    background: pink;
+ul li a{
+    padding: 10px;
+    display: block;
+}
+ 
+ul li a:hover{
+    background: yellow;
+}
+ 
+html.can-touch ul li a:hover{
+    background: none; /* disable hover effect on touch devices */
 }
 
 

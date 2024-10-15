@@ -1,9 +1,9 @@
 
-@media(hover: hover) and (pointer: fine) {
-    nav a:hover {
-        background: yellow;
-    }
+html.nontouch nav a:hover{ /* hover effect only visible to devices that report back as not supporting touch */
+    background: yellow;
 }
+
+
 
 .one {grid-area: one;}
 

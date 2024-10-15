@@ -55,7 +55,7 @@ html.nontouch nav a:hover{ /* hover effect only visible to devices that report b
 }
 
 body {
-    background-color: lightgoldenrodyellow;
+    background-color: blue;
     font-family: Avenir;
     text-align: center;
 }

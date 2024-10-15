@@ -1,13 +1,13 @@
 .h1{
-color: green; 
+color: pink; 
 }
  
 .h1:hover{
-    color: white; 
+    color: blue; 
 }
  
 html.can-touch h1:hover{
-    color: pink;  /* disable hover effect on touch devices */
+    color: yellow;  /* disable hover effect on touch devices */
 }
 
 

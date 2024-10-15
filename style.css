@@ -1,14 +1,13 @@
-ul li a{
-    padding: 10px;
-    display: block;
+.h1{
+color: green; 
 }
  
-ul li a:hover{
-    background: yellow;
+.h1:hover{
+    color: white; 
 }
  
-html.can-touch ul li a:hover{
-    background: none; /* disable hover effect on touch devices */
+html.can-touch h1:hover{
+    color: pink;  /* disable hover effect on touch devices */
 }
 
 
@@ -63,7 +62,7 @@ html.can-touch ul li a:hover{
 }
 
 body {
-    background-color: blue;
+    background-color: cream;
     font-family: Avenir;
     text-align: center;
 }

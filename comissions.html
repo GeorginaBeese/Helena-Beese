@@ -32,12 +32,10 @@
         <img style="width:300px;height: auto" src="images/Comissions2.JPG" alt="Johns bday card">
 
 <script>
-    function myFunction() {
-    var touchsupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)
-if (!touchsupport){ // browser doesn't support touch
-    document.documentElement.className += " non-touch"
-}
-    }
+document.addEventListener('touchstart', function addtouchclass(e){ // first time user touches the screen
+    document.documentElement.classList.add('can-touch') // add "can-touch" class to document root using classList API
+    document.removeEventListener('touchstart', addtouchclass, false) // de-register touchstart event
+}, false)
 </script>
         
     </body>

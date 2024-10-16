@@ -62,20 +62,20 @@
     </li>
   </ul>
 
-  <div class="block-link-area" data-link-area aria-role="region" aria-live="polite">
+<!--   <div class="block-link-area" data-link-area aria-role="region" aria-live="polite">
     <a class="block-link" href="/" data-button-link>Visit page</a>
-  </div>
+  </div>*-->
 </div>
 
       <!-- Adding our JavaScript in the script tag -->
       <script>
 const links = [...document.querySelectorAll('[data-link]')]
 const list = document.querySelector('[data-list]')
-const blockLink = document.querySelector('[data-button-link]')
+/*const blockLink = document.querySelector('[data-button-link]')*/
 
 const isHoverableDevice = window.matchMedia('(hover: hover) and (pointer: fine)')
 
-blockLink.hidden = true
+/*blockLink.hidden = true*/
 
 list.addEventListener('click', (e) => {
   if (!e.target.dataset.link || isHoverableDevice.matches) return

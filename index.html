@@ -24,17 +24,69 @@
        <img id="uclshowcase" alt="uclshowcase" src="https://ual-media-res.cloudinary.com/image/fetch/c_fill,f_auto,g_auto,q_auto,w_800/https://portfolio-tools.s3.eu-west-2.amazonaws.com/wp-content/uploads/2023/06/18142301/Blue-Mag-2-1.jpg"><br><br>
        
        <a id="UAL_website" href="https://ualshowcase.arts.ac.uk/project/494015/cover" target="_blank">Link to UAL website</a> 
-  
+  <svg class="defs" viewBox="0 0 496 512" width="0" height="0" title="grin">
+  <defs>
+    <path id="face" d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm80 168c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32zm-160 0c17.7 0 32 14.3 32 32s-14.3 32-32 32-32-14.3-32-32 14.3-32 32-32zm80 256c-60.6 0-134.5-38.3-143.8-93.3-2-11.8 9.3-21.6 20.7-17.9C155.1 330.5 200 336 248 336s92.9-5.5 123.1-15.2c11.3-3.7 22.6 6.1 20.7 17.9-9.3 55-83.2 93.3-143.8 93.3z" />
+  </defs>
+</svg>
+
+<div class="wrapper">
+  <ul data-list>
+    <li>
+      <a data-link="Jimmy" href="#0">
+        <svg viewBox="0 0 496 512" width="50" aria-hidden="true" focusable="false">
+          <use href="#face"></use>
+        </svg>
+        <span>Jimmy</span>
+      </a>
+    </li>
+    <li>
+      <a data-link="Roberta" href="#1">
+        <svg viewBox="0 0 496 512" width="50" aria-hidden="true" focusable="false">
+          <use href="#face"></use>
+        </svg>
+        <span>Roberta</span>
+      </a>
+    </li>
+    <li>
+      <a data-link="Charlie" href="#2">
+        <svg viewBox="0 0 496 512" width="50" aria-hidden="true" focusable="false">
+          <use href="#face"></use>
+        </svg>
+        <span>Charlie</span>
+      </a>
+    </li>
+  </ul>
+
+  <div class="block-link-area" data-link-area aria-role="region" aria-live="polite">
+    <a class="block-link" href="/" data-button-link>Visit page</a>
+  </div>
+</div>
 
       <!-- Adding our JavaScript in the script tag -->
       <script>
-        // Identifying our image
-        const uclshowcase = document.querySelector("#uclshowcase");
+const links = [...document.querySelectorAll('[data-link]')]
+const list = document.querySelector('[data-list]')
+const blockLink = document.querySelector('[data-button-link]')
 
-        // Adding reaction when image is clicked
-        uclshowcase.addEventListener("click", () => {
-           alert(`"Hey Helena!"`);
-        });
+const isHoverableDevice = window.matchMedia('(hover: hover) and (pointer: fine)')
+
+blockLink.hidden = true
+
+list.addEventListener('click', (e) => {
+  if (!e.target.dataset.link || isHoverableDevice.matches) return
+  
+  e.preventDefault()
+  
+  links.forEach((el) => {
+    el.classList.remove('is-active')
+  })
+  
+  blockLink.hidden = false
+  blockLink.innerText = `Visit ${e.target.dataset.link}’s page`
+  blockLink.setAttribute('href', e.target.href)
+  e.target.classList.add('is-active')
+})
       </script>
 
     </body>

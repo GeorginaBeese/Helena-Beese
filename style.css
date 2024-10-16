@@ -1,3 +1,101 @@
+HTML CSS JSResult Skip Results Iframe
+EDIT ON
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 2rem;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+[hidden] {
+  display: none;
+}
+
+svg {
+  width: 100%;
+  height: auto;
+  fill: currentColor;
+}
+
+svg.defs {
+  display: none;
+}
+
+.wrapper {
+  position: relative;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  position: relative;
+}
+
+a {
+  display: block;
+  color: inherit;
+  padding: 0.5rem;
+}
+
+a > * {
+  pointer-events: none;
+}
+
+a span {
+  display: none;
+  position: absolute;
+  bottom: calc(100% - 1rem);
+  left: calc(100% - 1rem);
+  background: yellow;
+  border-radius: 0.4rem;
+  z-index: 1;
+}
+
+a:hover,
+a:focus,
+a.is-active {
+  color: orangered;
+}
+
+a:hover span,
+a:focus span,
+a.is-active span {
+  display: block;
+  width: 150px;
+  text-align: center;
+  padding: 0.25rem;
+  color: black;
+}
+
+.block-link-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.block-link {
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.4rem;
+  border: 1px solid;
+  background: yellow;
+}
+
 h1{
 color: pink; 
 }

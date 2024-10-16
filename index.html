@@ -71,25 +71,30 @@
       <script>
 const links = [...document.querySelectorAll('[data-link]')]
 const list = document.querySelector('[data-list]')
+
+
+
+          
 /*const blockLink = document.querySelector('[data-button-link]')*/
 
+const overlays = document.querySelector(".overlay")
 const isHoverableDevice = window.matchMedia('(hover: hover) and (pointer: fine)')
 
 /*blockLink.hidden = true*/
 
-list.addEventListener('click', (e) => {
+overlays.addEventListener('click', (e) => {
   if (!e.target.dataset.link || isHoverableDevice.matches) return
   
   e.preventDefault()
   
-  links.forEach((el) => {
+  overlays.forEach((el) => {
     el.classList.remove('is-active')
   })
   
-  blockLink.hidden = false
+ /* blockLink.hidden = false
   blockLink.innerText = `Visit ${e.target.dataset.link}’s page`
   blockLink.setAttribute('href', e.target.href)
-  e.target.classList.add('is-active')
+  e.target.classList.add('is-active') */
 })
       </script>
 

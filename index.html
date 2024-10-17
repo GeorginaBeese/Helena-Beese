@@ -25,76 +25,73 @@
         <h1>Artwork heyy</h1>
       </div>
                 
-        <div class="painting one">    
-        <img class="image" id="img" src="images/comissions1.JPG" alt="Painting of Yazz">
+
+      <div class="wrapper">
+        <ul data-list>
+          <li>
+            <a data-link="Jimmy" href="#0">
+                <img class="image" id="img" src="Artwork/Yazz_2024.jpeg" alt="Painting of Yazz">
+              <span> Yazz, 2024, Acrylics and pastels on paper, 12x12" </span>
+            </a>
+          </li>
+          <br>
+        </ul>
+    </div>
+
+        <div class="painting one">
+            <ul data-list>
+              <li>
+                <a data-link="Jimmy" href="#0">
+                    <img class="image" id="img" src="Artwork/Yazz_2024.jpeg" alt="Painting of Yazz">
+                  <span> Yazz, 2024, Acrylics and pastels on paper, 12x12" </span>
+                </a>
+              </li>
+              <br>
+            </ul>
+        </div>
+
+<!--
+    <div class="painting one">    
+        <img class="image" id="img" src="Artwork/Yazz_2024.jpeg" alt="Painting of Yazz">
         <div class="overlay"> 
           <p> Yazz, 2024, Acrylics and pastels on paper, 12x12" </p>
         </div>
+      </div> -->
+
+      
+
+
+
+
+      <!--
+        <div class="block-link-area" data-link-area aria-role="region" aria-live="polite">
+          <a class="block-link" href="/" data-button-link>Visit page</a>
         </div>
-    </div>
+      </div>-->
 
-        
-<div class="wrapper">
-  <ul data-list>
-    <li>
-      <a data-link="Jimmy" href="#0">
-        <svg viewBox="0 0 496 512" width="50" aria-hidden="true" focusable="false">
-          <use href="#face"></use>
-        </svg>
-        <span>Jimmy</span>
-      </a>
-    </li>
-    <li>
-      <a data-link="Roberta" href="#1">
-        <svg viewBox="0 0 496 512" width="50" aria-hidden="true" focusable="false">
-          <use href="#face"></use>
-        </svg>
-        <span>Roberta</span>
-      </a>
-    </li>
-    <li>
-      <a data-link="Charlie" href="#2">
-        <svg viewBox="0 0 496 512" width="50" aria-hidden="true" focusable="false">
-          <use href="#face"></use>
-        </svg>
-        <span>Charlie</span>
-      </a>
-    </li>
-  </ul>
-
-<!--   <div class="block-link-area" data-link-area aria-role="region" aria-live="polite">
-    <a class="block-link" href="/" data-button-link>Visit page</a>
-  </div>*-->
-</div>
-
-      <!-- Adding our JavaScript in the script tag -->
       <script>
+
 const links = [...document.querySelectorAll('[data-link]')]
 const list = document.querySelector('[data-list]')
-
-
-
-          
 /*const blockLink = document.querySelector('[data-button-link]')*/
 
-const overlays = document.querySelector(".overlay")
 const isHoverableDevice = window.matchMedia('(hover: hover) and (pointer: fine)')
 
 /*blockLink.hidden = true*/
 
-overlays.addEventListener('click', (e) => {
+list.addEventListener('click', (e) => {
   if (!e.target.dataset.link || isHoverableDevice.matches) return
   
   e.preventDefault()
   
-  overlays.forEach((el) => {
+  links.forEach((el) => {
     el.classList.remove('is-active')
   })
   
  /* blockLink.hidden = false
   blockLink.innerText = `Visit ${e.target.dataset.link}’s page`
-  blockLink.setAttribute('href', e.target.href)
-  e.target.classList.add('is-active') */
+  blockLink.setAttribute('href', e.target.href) */
+  e.target.classList.add('is-active')
 })
       </script>
 

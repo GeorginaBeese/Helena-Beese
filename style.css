@@ -9,7 +9,9 @@
 
 .one {grid-column: 1 / span 6;  grid-row: 2 / span 1;}
 
-
+.wrapper {
+  position: relative;
+}
 
 .painting {
   position: relative;
